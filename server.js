@@ -57,7 +57,8 @@ app.get("/config.js", (req, res) => {
   res.setHeader("Content-Type", "application/javascript; charset=utf-8");
   res.send(`window.__SG_CONFIG__ = {
     PAYPAL_CLIENT_ID: ${
-      json: JSON.stringify(PAYPAL_CLIENT_ID || "")
+PAYPAL_CLIENT_ID: PAYPAL_CLIENT_ID || ""
+
     }.json
   };`);
 });
